@@ -4,8 +4,8 @@
   "description": "tinder for dev",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "start": "node --env-file=.env src/app.js",
+    "dev": "nodemon --exec \"node --env-file=.env\" src/app.js"
   },
   "keywords": [
     "backend"
@@ -13,7 +13,11 @@
   "author": "Anubhav",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
-    "mongoose": "^9.6.1"
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.6.1",
+    "validator": "^13.15.35"
   }
 }
