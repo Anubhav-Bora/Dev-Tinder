@@ -8,11 +8,10 @@
 -patch/profile/edit
 -path /profile/password
 
--post /request/send/interested/:userId
--post /request/send/ignored/:userId
+-post /request/send/:status/:toUserId
+  (where status = "interested" or "ignored")
 
--post /request/review/accepted/:requestId
--post /request/review/rejected/:requestId
+-post /request/review/:status/:requestId
 
 -get /connections
 -get /requests/recieved
